@@ -1,5 +1,6 @@
 'use client';
 
+import Button from "@/app/components/Button";
 import Input from "@/app/components/inputs/Input";
 import { useCallback, useState } from "react";
 import { 
@@ -76,10 +77,27 @@ const AuthForm = () => {
                 >
                     <Input
                         id="email"
-                        label="Email"
+                        label="Email Address"
+                        type="email"
                         register={register}
                         errors={errors}
                     />
+                    <Input
+                        id="password"
+                        label="Password"
+                        type="password"
+                        register={register}
+                        errors={errors}
+                    />
+                    <div>
+                        <Button
+                            disabled={isLording}
+                            fullWidth
+                            type="submit"
+                        >
+                             {variant === 'LOGIN' ? 'Sign In' : 'Register'}
+                        </Button>
+                    </div>
                 </form>
             </div>
         </div>
