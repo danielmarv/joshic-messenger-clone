@@ -15,7 +15,7 @@ type Variant = 'LOGIN' | 'REGISTER';
 
 const AuthForm = () => {
     const [variant, setVariant] = useState<Variant>('LOGIN');
-    const [isLording, setIsLording] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const toggleVariant = useCallback(() => {
         if (variant === 'LOGIN') {
@@ -40,7 +40,7 @@ const AuthForm = () => {
     });
 
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
-        setIsLording(true);
+        setIsLoading(true);
 
         if (variant === 'REGISTER') {
             //Axios
@@ -85,6 +85,7 @@ const AuthForm = () => {
                             label="Name"
                             register={register}
                             errors={errors}
+                            disabled={isLoading}
                         />
                     )}
                     <Input
@@ -93,6 +94,7 @@ const AuthForm = () => {
                         type="email"
                         register={register}
                         errors={errors}
+                        disabled={isLoading}
                     />
                     <Input
                         id="password"
@@ -100,10 +102,11 @@ const AuthForm = () => {
                         type="password"
                         register={register}
                         errors={errors}
+                        disabled={isLoading}
                     />
                     <div>
                         <Button
-                            disabled={isLording}
+                            disabled={isLoading}
                             fullWidth
                             type="submit"
                         >
@@ -155,7 +158,10 @@ const AuthForm = () => {
                         </div>
                         <div
                             onClick={toggleVariant}
-                        ></div>
+                            className="underline cursor-pointer"
+                        >
+                            {variant === 'LOGIN' ? 'Create an account': 'Login'}
+                        </div>
                     </div>
                 </div>
             </div> 
