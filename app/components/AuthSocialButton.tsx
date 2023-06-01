@@ -11,7 +11,10 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
 }) => {
   return (
     <button
+        type="button"
+        onClick={onClick}
         className="
+            cursor-pointer
             inline-flex
             w-full
             justify-center
@@ -25,7 +28,7 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
             ring-inset
             ring-gray-300
             hover:bg-gray-50
-            focu:outline-offset-0
+            focus:outline-offset-0
         "
     >
         <Icon />
@@ -33,4 +36,4 @@ const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
   )
 }
 
-export default AuthSocialButton
+export default AuthSocialButton;
