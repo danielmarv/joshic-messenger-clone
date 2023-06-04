@@ -70,20 +70,20 @@ const AuthForm = () => {
     }
 
     const socialAction = (action: string) => {
-        setIsLoading(true)
-
+        setIsLoading(true);
+    
         signIn(action, { redirect: false })
-        .then((callback) => {
+          .then((callback) => {
             if (callback?.error) {
-                toast.error('Invalid credentials');
+              toast.error('Invalid credentials');
             }
-
+    
             if (callback?.ok && !callback?.error) {
-                toast.success('Logged in successfully!')
+              toast.success('Logged in successfully!');
             }
-        })
-        .finally(() => setIsLoading(false));
-    }
+          })
+          .finally(() => setIsLoading(false));
+      };
     return (
         <div
             className="
@@ -159,18 +159,16 @@ const AuthForm = () => {
                                 Or continue with
                             </span>
                         </div>
-
-                        <div className="mt-6 flex gap-2">
-                            <AuthSocialButton
-                                
-                                icon={BsGithub}
-                                onClick={() => socialAction('github')}
-                            />
-                            <AuthSocialButton
-                                icon={BsGoogle}
-                                onClick={() => socialAction('google')}
-                            />
-                        </div>
+                    </div>
+                    <div className="mt-6 flex gap-2">
+                        <AuthSocialButton
+                            icon={BsGithub}
+                            onClick={() => socialAction('github')}
+                        />
+                        <AuthSocialButton
+                            icon={BsGoogle}
+                            onClick={() => socialAction('google')}
+                        />  
                     </div>
                     <div className="
                         flex
@@ -192,6 +190,7 @@ const AuthForm = () => {
                             {variant === 'LOGIN' ? 'Create an account': 'Login'}
                         </div>
                     </div>
+                    
                 </div>
             </div> 
         </div>
