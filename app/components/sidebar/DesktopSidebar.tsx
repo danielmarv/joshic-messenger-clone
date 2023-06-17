@@ -39,7 +39,7 @@ const DesktopSidebar = () => {
                     role="list"
                     className="
                         flex
-                        fex-col
+                        flex-col
                         items-center
                         space-y-1
                     "

@@ -20,9 +20,9 @@ const DesktopItem:React.FC<DesktopItemProps> = ({
 }) => {
     const handleClick = () => {
         if (onClick) {
-            return(onClick)
+            return onClick();
         }
-    }
+    };
     return (
         <li onClick={handleClick}>
             <Link
@@ -50,4 +50,4 @@ const DesktopItem:React.FC<DesktopItemProps> = ({
     )
 }
 
-export default DesktopItem
+export default DesktopItem;
