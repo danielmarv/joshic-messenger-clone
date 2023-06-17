@@ -4,4 +4,4 @@ const DesktopSidebar = () => {
   )
 }
 
-export default DesktopSidebar
+export default DesktopSidebar;
