@@ -14,7 +14,7 @@ const Avatar: React.FC<AvatarProps> = ({
         <div className="relative">
             <div
                 className="
-                    relatie
+                    relative
                     inline-block
                     rounded-full
                     overflow-hidden
@@ -30,6 +30,22 @@ const Avatar: React.FC<AvatarProps> = ({
                     fill 
                 />
             </div>
+            <span
+                className="
+                    absolute
+                    block
+                    rounded-full
+                    bg-green-500
+                    ring-2
+                    top-0
+                    right-0
+                    ring-white
+                    h-2
+                    w-2
+                    md:h-3
+                    md:w-3
+                "
+            />
         </div>
     )
 }
