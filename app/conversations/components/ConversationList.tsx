@@ -2,14 +2,16 @@
 
 import useConversation from "@/app/hooks/useConversation";
 import { Conversation } from "@prisma/client";
+import { FullConversationType } from "@/app/types"
 import { MdOutlineGroupAdd } from "react-icons/md";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import ConversationBox from "./ConversationBox";
 
+
 interface ConversationListProps {
-  initialItems: Conversation[];
+  initialItems: FullConversationType[];
 }
 
 const ConversationList: React.FC<ConversationListProps> = ({
