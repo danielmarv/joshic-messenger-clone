@@ -1,7 +1,6 @@
 'use client';
 
-import useConversation from "@/app/hooks/useConversation";
-import { Conversation } from "@prisma/client";
+import useConversation from "@/app/hooks/useConversation"; 
 import { FullConversationType } from "@/app/types"
 import { MdOutlineGroupAdd } from "react-icons/md";
 import clsx from "clsx";
