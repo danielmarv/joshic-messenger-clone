@@ -122,7 +122,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                     `,
                         hasSeen ? 'text-gray-500' : 'text-black font-medium'
                     )}
-                >
+                > 
                     {lastMessageText}
                 </p>
             </div>
