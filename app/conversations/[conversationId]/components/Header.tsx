@@ -53,12 +53,13 @@ const Header: React.FC<HeaderProps> = ({
                     href="/conversations"
                 >
                     <HiChevronLeft size={32}/>
-                </Link>
+                </Link> 
                 <Avatar user={otherUser} />
                 <div className="flex flex-col">
                     <div>
                         {conversation.name || otherUser.name}
                     </div>
+                    <div></div>
                 </div>
             </div>
         </div>
