@@ -1,9 +1,11 @@
 'use client';
 
+import Avatar from "@/app/components/Avatar";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { Conversation, User } from "@prisma/client";
 import Link from "next/link";
 import { useMemo } from "react";
+import { HiChevronLeft } from "react-icons/hi";
 
 interface HeaderProps {
     conversation: Conversation & {
@@ -46,11 +48,18 @@ const Header: React.FC<HeaderProps> = ({
                         block
                         text-sky-500
                         hover:text-sky-600
+                        cursor-pointer
                     "
                     href="/conversations"
                 >
-                    
+                    <HiChevronLeft size={32}/>
                 </Link>
+                <Avatar user={otherUser} />
+                <div className="flex flex-col">
+                    <div>
+                        {conversation.name || otherUser.name}
+                    </div>
+                </div>
             </div>
         </div>
     )
