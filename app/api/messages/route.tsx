@@ -64,7 +64,9 @@ export async function POST(
                     }
                 }
             }
-        })
+        }); 
+
+        return NextResponse.json(newMessage);
     } catch (error) {
         console.log(error, 'ERROR_MESSAGES');
         return new NextResponse('InternalError', {status: 500});
