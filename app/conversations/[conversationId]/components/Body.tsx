@@ -1,5 +1,11 @@
 "use client";
 
+import { FullMessagetype } from "@/app/types"
+
+interface BodyProps {
+  initialMessages: FullMessagetype[]
+}
+
 const Body = () => {
   return (
     <div className="flex-1 overflow-y-auto">
@@ -8,4 +14,4 @@ const Body = () => {
   )
 }
 
-export default Body
+export default Body;
